@@ -129,4 +129,11 @@
       url: config.url+url_for(post.path)
     }) %>
   <% } %>
+
+  <% if(theme.gitalk){ %>
+  <%- partial('post/gitalk', {
+      number: post.number
+    }) %>
+  <% } %>
+
 <% } %>
